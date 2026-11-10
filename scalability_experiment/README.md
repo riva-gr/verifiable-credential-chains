@@ -24,12 +24,11 @@ python run_experiment.py
 ```
 
 Time and memory are measured, so the runs are executed one at a time; close other programs and
-keep the computer from sleeping. The full run (75 algorithm runs) takes about 4 hours on a
-4-core i5-1135G7 with 16 GB RAM, most of it in LPwE at 10,000 and 20,000 identities; LPwE at
+keep the computer from sleeping. LPwE at
 20,000 identities needs about 8 GB of memory. Figures are written to `results/figures/` and
 tables to `results/summary/`.
 
-Quick check (about 1 minute):
+Quick check:
 
 ```bash
 python run_experiment.py --sizes 1000,2500 --seeds 1729 --output results_quick

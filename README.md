@@ -39,9 +39,9 @@ pip install -r requirements.txt
 python run_experiment.py
 ```
 
-`scalability_experiment` runs on Linux or macOS only.
+`scalability_experiment` runs on Linux or macOS only, because it measures each run's peak memory with `os.wait4`, which Windows does not provide.
 
-Results including figures are written to `results/` inside the folder. Options and quick checks are in each folder's README.
+Results, including figures, are written to `results/` inside the folder. Options and quick checks are in each folder's README.
 
 ## License
 

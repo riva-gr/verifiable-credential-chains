@@ -29,10 +29,9 @@ pip install -r requirements.txt
 python run_experiment.py
 ```
 
-Figures are written to `results/figures/` and tables to `results/summary/`. The full run
-takes about 2 hours.
+Figures are written to `results/figures/` and tables to `results/summary/`. 
 
-Quick check (about 10 minutes):
+Quick check:
 
 ```bash
 python run_experiment.py --experiments 2 --percentages 20,80 --output results_quick

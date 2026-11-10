@@ -1,0 +1,7 @@
+results*/
+data_rebuilt/
+*.xes.gz
+bpi_2017.csv
+__pycache__/
+*.pyc
+.venv/

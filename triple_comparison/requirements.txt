@@ -1,0 +1,4 @@
+numpy==2.5.4
+matplotlib==3.11.2
+networkx==3.7
+pymining==0.2

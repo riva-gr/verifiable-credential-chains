@@ -37,11 +37,9 @@ python run_experiment.py --jobs 4
 ```
 
 Processing time is not reported in this experiment, so runs can be executed several at a time
-(`--jobs`). Figures are written to `results/figures/` and tables to `results/summary/`. The full
-run (165 algorithm runs) takes about 8 minutes with `--jobs 4` (about 17 minutes with
-`--jobs 1`).
+(`--jobs`). Figures are written to `results/figures/` and tables to `results/summary/`. 
 
-Quick check (under 1 minute):
+Quick check:
 
 ```bash
 python run_experiment.py --seeds 1729 --percentages 0,2 --output results_quick

@@ -38,11 +38,9 @@ python run_experiment.py --jobs 4
 ```
 
 Processing time is not reported in this experiment, so runs can be executed several at a time
-(`--jobs`). Figures are written to `results/figures/` and tables to `results/summary/`. The full
-run takes about 2 hours with `--jobs 4` (about 8 hours with `--jobs 1`), most of it in CAM and
-GSP-X runs with low `risup` and small noise pools that reach the 120 s limit.
+(`--jobs`). Figures are written to `results/figures/` and tables to `results/summary/`. 
 
-Quick check (about 5 minutes):
+Quick check:
 
 ```bash
 python run_experiment.py --experiments 2 --noise-sizes 300,1000 --risups 0.5,1.0 --similarities 0.1,0.5 --output results_quick

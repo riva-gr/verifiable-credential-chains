@@ -5,19 +5,21 @@ Through Verifiable Credential Chains* by T. G. Papaioannou and V. Ritas (submitt
 
 Each folder is a self-contained experiment with its own README, requirements and tests.
 
-| Folder | Manuscript section | Full run |
-|---|---|---|
-| [`triple_comparison`](triple_comparison/README.md) | Original Algorithm Results: comparison of the three algorithms | about 2 h |
-| [`sensitivity_experiment`](sensitivity_experiment/README.md) | Original Algorithm Results: parameter sensitivity | about 20 min (`--jobs 4`) |
-| [`noise_experiment`](noise_experiment/README.md) | Original Algorithm Results: noise | about 2 h (`--jobs 4`) |
-| [`scalability_experiment`](scalability_experiment/README.md) | Scalability Analysis | about 4 h |
-| [`poisoning_experiment`](poisoning_experiment/README.md) | Robustness Against Targeted Credential Poisoning | about 8 min (`--jobs 4`) |
-| [`bpi_triple_comparison`](bpi_triple_comparison/README.md) | Real-World Validation (BPI Challenge 2017) | about 10.5 h |
-| [`gspx_modifications`](gspx_modifications/README.md) | Modified Algorithm Results: GSP-X | about 45 min |
-| [`cam_modifications`](cam_modifications/README.md) | Modified Algorithm Results: CAM | about 1 h |
-| [`lpwe_modifications`](lpwe_modifications/README.md) | Modified Algorithm Results: LPwE | about 2 h |
+| Folder | Manuscript section |
+|---|---|
+| [`triple_comparison`](triple_comparison/README.md) | Original Algorithm Results: comparison of the three algorithms |
+| [`sensitivity_experiment`](sensitivity_experiment/README.md) | Original Algorithm Results: parameter sensitivity |
+| [`noise_experiment`](noise_experiment/README.md) | Original Algorithm Results: noise |
+| [`scalability_experiment`](scalability_experiment/README.md) | Scalability Analysis |
+| [`poisoning_experiment`](poisoning_experiment/README.md) | Robustness Against Targeted Credential Poisoning |
+| [`bpi_triple_comparison`](bpi_triple_comparison/README.md) | Real-World Validation (BPI Challenge 2017) |
+| [`gspx_modifications`](gspx_modifications/README.md) | Modified Algorithm Results: GSP-X |
+| [`cam_modifications`](cam_modifications/README.md) | Modified Algorithm Results: CAM |
+| [`lpwe_modifications`](lpwe_modifications/README.md) | Modified Algorithm Results: LPwE |
 
 ## Run an experiment (tested with Python 3.12.3)
+
+Linux / macOS:
 
 ```bash
 cd noise_experiment
@@ -27,8 +29,19 @@ pip install -r requirements.txt
 python run_experiment.py
 ```
 
-Results are written to `results/` inside the folder. Options, quick checks and Windows
-instructions (where supported) are in each folder's README.
+Windows (PowerShell):
+
+```powershell
+cd noise_experiment
+py -m venv .venv
+.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+python run_experiment.py
+```
+
+`scalability_experiment` runs on Linux or macOS only.
+
+Results are written to `results/` inside the folder. Options and quick checks are in each folder's README.
 
 ## License
 

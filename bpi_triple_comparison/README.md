@@ -50,7 +50,7 @@ Redo the selection and the figures from existing results:
 python run_experiment.py --steps select,plot
 ```
 
-Tests (a few seconds):
+Tests:
 
 ```bash
 python -m unittest discover tests

@@ -37,7 +37,7 @@ python run_experiment.py --jobs 4
 ```
 
 Processing time is not reported in this experiment, so runs can be executed several at a time
-(`--jobs`). Figures are written to `results/figures/` and tables to `results/summary/`. 
+(`--jobs`). Figures are written to `results/figures/` and tables to `results/summary/`.
 
 Quick check:
 
@@ -57,7 +57,7 @@ Redo the tables and the figures from existing results:
 python run_experiment.py --steps summarize,plot
 ```
 
-Tests (a few seconds):
+Tests:
 
 ```bash
 python -m unittest discover tests

@@ -289,6 +289,8 @@ if __name__ == "__main__":
         f1 = (
             2 * (precision * recall) / (precision + recall) if (precision + recall) > 0 else 0
         )
+        if TP + FP + FN == 0:
+            accuracy = precision = recall = f1 = 1.0
 
 
         print("\n\n_________________________________________________________\n\nMetrics: ")

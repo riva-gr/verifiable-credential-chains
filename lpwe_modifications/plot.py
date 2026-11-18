@@ -39,7 +39,7 @@ def bars(row, metric):
     return mean, mean - low, high - mean
 
 
-def plot(data, metric, name, tag):
+def plot(data, metric, name, tag, beside=False):
     plt.figure(figsize=(8, 6))
     top, xs_all = 0.0, []
     for variant, (_, label, style, color) in config.VARIANTS.items():
@@ -56,7 +56,10 @@ def plot(data, metric, name, tag):
     plt.xlabel("Ground Truth (%)", fontsize=FONT_SIZE)
     plt.ylabel("Time (s)" if metric == "time" else name, fontsize=FONT_SIZE)
     plt.title(name + " Comparison", fontsize=FONT_SIZE)
-    plt.legend(fontsize=18, loc="best")
+    if not beside:
+        plt.legend(fontsize=23, loc="best", framealpha=0.5)
+    elif metric == "time":
+        plt.legend(fontsize=28, loc="center left", bbox_to_anchor=(1.03, 0.5), framealpha=0.8)
     plt.xticks(xs, fontsize=28)
     plt.yticks(fontsize=28)
     plt.grid(True, which="both", linestyle="--", linewidth=0.5)
@@ -67,7 +70,10 @@ def plot(data, metric, name, tag):
         if len(xs) > 1:
             plt.xlim([min(xs), max(xs)])
         plt.ylim([0, 1.05])
-    out = config.RUN_DIR / "figures" / f"LPwE_modifications_comparison_(optimal)_{tag}.pdf"
+    folder = config.RUN_DIR / "figures"
+    if beside:
+        folder = folder / "legend_beside"
+    out = folder / f"LPwE_modifications_comparison_(optimal)_{tag}.pdf"
     out.parent.mkdir(parents=True, exist_ok=True)
     plt.savefig(out, dpi=600, bbox_inches="tight")
     plt.close()
@@ -76,7 +82,9 @@ def plot(data, metric, name, tag):
 
 def main() -> None:
     for table, metric, name, tag in FIGURES:
-        plot(load(table), metric, name, tag)
+        data = load(table)
+        plot(data, metric, name, tag)
+        plot(data, metric, name, tag, beside=True)
 
 
 if __name__ == "__main__":

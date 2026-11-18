@@ -29,7 +29,7 @@ pip install -r requirements.txt
 python run_experiment.py
 ```
 
-Figures are written to `results/figures/` and tables to `results/summary/`. 
+Figures are written to `results/figures/` and tables to `results/summary/`.
 
 Quick check:
 
@@ -49,7 +49,7 @@ Redo the selection and the figures from existing results:
 python run_experiment.py --steps select,plot
 ```
 
-Tests (a few seconds):
+Tests:
 
 ```bash
 python -m unittest discover tests

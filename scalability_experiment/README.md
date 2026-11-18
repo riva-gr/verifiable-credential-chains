@@ -24,9 +24,8 @@ python run_experiment.py
 ```
 
 Time and memory are measured, so the runs are executed one at a time; close other programs and
-keep the computer from sleeping. LPwE at
-20,000 identities needs about 8 GB of memory. Figures are written to `results/figures/` and
-tables to `results/summary/`.
+keep the computer from sleeping. LPwE at 20,000 identities needs about 8 GB of memory. Figures
+are written to `results/figures/` and tables to `results/summary/`.
 
 Quick check:
 
@@ -46,7 +45,7 @@ Redo the tables and the figures from existing results:
 python run_experiment.py --steps summarize,plot
 ```
 
-Tests (a few seconds):
+Tests:
 
 ```bash
 python -m unittest discover tests
